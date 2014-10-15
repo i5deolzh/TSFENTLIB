@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2461D97C-F5B3-4FF9-8B86-2B16B271A734}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TSF.ENTLIB.Common</RootNamespace>
+    <AssemblyName>TSF.ENTLIB.Common</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Enyim.Caching, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Enyim.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Caching\CacheProvider.cs" />
+    <Compile Include="Caching\DefaultCache.cs" />
+    <Compile Include="Caching\ICache.cs" />
+    <Compile Include="Caching\NoCache.cs" />
+    <Compile Include="Caching\MemcachedClient.cs" />
+    <Compile Include="Captcha\Captcha.cs" />
+    <Compile Include="Captcha\CaptchaInfo.cs" />
+    <Compile Include="Captcha\CaptchaProvider.cs" />
+    <Compile Include="Jayrock\Json\BooleanObject.cs" />
+    <Compile Include="Jayrock\Json\Collections\KeyedCollection.cs" />
+    <Compile Include="Jayrock\Json\Compat.cs" />
+    <Compile Include="Jayrock\Json\Configuration\DictionarySectionHandler.cs" />
+    <Compile Include="Jayrock\Json\Configuration\ListSectionHandler.cs" />
+    <Compile Include="Jayrock\Json\Configuration\TypeListSectionHandler.cs" />
+    <Compile Include="Jayrock\Json\Diagnostics\DebugString.cs" />
+    <Compile Include="Jayrock\Json\IndentedTextWriter.cs" />
+    <Compile Include="Jayrock\Json\InternetDate.cs" />
+    <Compile Include="Jayrock\Json\Json\BufferedCharReader.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\AnyType.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\AnyImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\ArrayImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\BooleanExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\BooleanImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\ByteArrayExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\ByteArrayImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\ComponentExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\ComponentImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\DataRowExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\DataRowViewExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\DataSetExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\DataTableExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\DataViewExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\DateTimeExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\DateTimeImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\DictionaryExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\DictionaryImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\EnumerableExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\EnumImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\ExportAwareExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\ExporterBase.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\GuidImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\ImportAwareImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\ImporterBase.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\ListImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\NameValueCollectionExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\NameValueCollectionImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\NumberExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\NumberImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\StringExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\Converters\StringImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\CustomTypeDescriptor.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\ExportContext.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\ExporterCollection.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\ExporterListSectionHandler.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\IExporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\IImporter.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\IJsonExportable.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\IJsonImportable.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\ImportContext.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\ImporterCollection.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\ImporterListSectionHandler.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\JsonConvert.cs" />
+    <Compile Include="Jayrock\Json\Json\Conversion\JsonIgnoreAttribute.cs" />
+    <Compile Include="Jayrock\Json\Json\EmptyJsonWriter.cs" />
+    <Compile Include="Jayrock\Json\Json\InvalidMemberException.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonArray.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonBoolean.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonException.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonNull.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonNumber.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonObject.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonReader.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonReaderBase.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonRecorder.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonString.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonTextReader.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonTextWriter.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonToken.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonTokenClass.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonWriter.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonWriterBase.cs" />
+    <Compile Include="Jayrock\Json\Json\JsonWriterBracket.cs" />
+    <Compile Include="Jayrock\Json\UnixTime.cs" />
+    <Compile Include="Jayrock\Mask.cs" />
+    <Compile Include="Net\FileItem.cs" />
+    <Compile Include="Net\HttpUtils.cs" />
+    <Compile Include="SharpZipLib\Checksums\Adler32.cs" />
+    <Compile Include="SharpZipLib\Checksums\CRC32.cs" />
+    <Compile Include="SharpZipLib\Checksums\IChecksum.cs" />
+    <Compile Include="SharpZipLib\Checksums\StrangeCRC.cs" />
+    <Compile Include="SharpZipLib\Core\FileSystemScanner.cs" />
+    <Compile Include="SharpZipLib\Core\INameTransform.cs" />
+    <Compile Include="SharpZipLib\Core\IScanFilter.cs" />
+    <Compile Include="SharpZipLib\Core\NameFilter.cs" />
+    <Compile Include="SharpZipLib\Core\PathFilter.cs" />
+    <Compile Include="SharpZipLib\Core\StreamUtils.cs" />
+    <Compile Include="SharpZipLib\Core\WindowsPathUtils.cs" />
+    <Compile Include="SharpZipLib\Encryption\PkzipClassic.cs" />
+    <Compile Include="SharpZipLib\Encryption\ZipAESStream.cs" />
+    <Compile Include="SharpZipLib\Encryption\ZipAESTransform.cs" />
+    <Compile Include="SharpZipLib\SharpZipBaseException.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\Deflater.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\DeflaterConstants.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\DeflaterEngine.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\DeflaterHuffman.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\DeflaterPending.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\Inflater.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\InflaterDynHeader.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\InflaterHuffmanTree.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\PendingBuffer.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\Streams\DeflaterOutputStream.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\Streams\InflaterInputStream.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\Streams\OutputWindow.cs" />
+    <Compile Include="SharpZipLib\Zip\Compression\Streams\StreamManipulator.cs" />
+    <Compile Include="SharpZipLib\Zip\FastZip.cs" />
+    <Compile Include="SharpZipLib\Zip\IEntryFactory.cs" />
+    <Compile Include="SharpZipLib\Zip\WindowsNameTransform.cs" />
+    <Compile Include="SharpZipLib\Zip\ZipConstants.cs" />
+    <Compile Include="SharpZipLib\Zip\ZipEntry.cs" />
+    <Compile Include="SharpZipLib\Zip\ZipEntryFactory.cs" />
+    <Compile Include="SharpZipLib\Zip\ZipException.cs" />
+    <Compile Include="SharpZipLib\Zip\ZipExtraData.cs" />
+    <Compile Include="SharpZipLib\Zip\ZipFile.cs" />
+    <Compile Include="SharpZipLib\Zip\ZipHelperStream.cs" />
+    <Compile Include="SharpZipLib\Zip\ZipInputStream.cs" />
+    <Compile Include="SharpZipLib\Zip\ZipNameTransform.cs" />
+    <Compile Include="SharpZipLib\Zip\ZipOutputStream.cs" />
+    <Compile Include="Util\ExcelHelper.cs" />
+    <Compile Include="Util\FileUtil.cs" />
+    <Compile Include="Util\GenericComparer.cs" />
+    <Compile Include="Image\ImageTools.cs" />
+    <Compile Include="Image\OctreeQuantizer.cs" />
+    <Compile Include="Image\Quantizer.cs" />
+    <Compile Include="Net\Mail.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\Singleton.cs" />
+    <Compile Include="Util\CHS2PinyinUtil.cs" />
+    <Compile Include="Util\OleDBUtil.cs" />
+    <Compile Include="Util\XmlUtil.cs" />
+    <Compile Include="Web\Pager.cs" />
+    <Compile Include="Util\Utils.cs" />
+    <Compile Include="Web\WebUtils.cs" />
+    <Compile Include="Util\EncryptUtil.cs" />
+    <Compile Include="Web\VerifyCodes.cs" />
+    <Compile Include="Util\XmlSerializerUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="__DEL\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
